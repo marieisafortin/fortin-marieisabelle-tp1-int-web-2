@@ -91,6 +91,7 @@ footer {
 }
 .section h2 {
   text-transform: uppercase;
+  text-align: center;
 }
 .section p a {
   color: rgb(136, 24, 76);

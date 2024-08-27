@@ -1,7 +1,4 @@
-/*
-On doit importer les variables et les placeholders pour pouvoir s'en servir.
-L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour appeler les variables.
-*/
+
 @use 'variables' as *;
 @use 'placeholders';
 
@@ -36,12 +33,11 @@ footer {
 }
 
 .header-content {
-  /*La règle @extend permet d'aller chercher les propriétés CSS dans le placeholder %flex-between. Voir le _partial _placeholders*/
   @extend %flex-between;
 }
 
 .footer-content {
-  /*On réutilise le même placeholder pour éviter de répéter du code.*/
+
   @extend %flex-between;
 
   &__message {
