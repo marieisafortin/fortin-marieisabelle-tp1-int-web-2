@@ -1,0 +1,38 @@
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace variables.$abc à chaque fois.
+*/
+@use "variables" as v;
+@use "placeholders";
+
+.nav-list {
+    list-style: none;
+
+    &__list-item {
+        display: inline-block;
+        margin-left: 0.8em;
+    }
+
+    &__link {
+        /*La règle @extend permet d'aller chercher les propriétés CSS dans le placeholder %button. Voir le _partial _placeholders*/
+        @extend %button;
+        text-transform: uppercase;
+        color: v.$accent-color-2;
+
+        &--actuel-header {
+            border-bottom: 0.2em solid v.$accent-color;
+        }
+
+        &--actuel-footer {
+            border-bottom: 0.2em solid v.$primary-color;
+        }
+    }
+
+    &__link:hover {
+        background-color: v.$primary-color;
+    }
+
+    &--small {
+        font-size: 0.8em;
+    }
+}

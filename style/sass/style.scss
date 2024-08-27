@@ -1,0 +1,8 @@
+/*
+On doit importer tous les partials nécessaires pour générer notre CSS.
+Pas besoin d'importer _placeholders et _variables, car ils sont déjà importés et utilisés dans les autres partials.
+*/
+
+@use 'general';
+@use 'navigation';
+@use 'main';

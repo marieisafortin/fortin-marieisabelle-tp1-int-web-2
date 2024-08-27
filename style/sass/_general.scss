@@ -1,0 +1,59 @@
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour appeler les variables.
+*/
+@use 'variables' as *;
+@use 'placeholders';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+  color: $secondary-color;
+  line-height: 1.4;
+  font-family: $font-stack;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: $neutral-color;
+}
+
+footer {
+  background-color: $accent-color;
+  margin-top: auto;
+  padding: 1em;
+}
+
+.header-content {
+  /*La règle @extend permet d'aller chercher les propriétés CSS dans le placeholder %flex-between. Voir le _partial _placeholders*/
+  @extend %flex-between;
+}
+
+.footer-content {
+  /*On réutilise le même placeholder pour éviter de répéter du code.*/
+  @extend %flex-between;
+
+  &__message {
+    text-align: center;
+    color: $accent-color-2;
+  }
+}
+
+.logo {
+  width: 70%;
+
+  &--small {
+    width: 50%;
+  }
+}

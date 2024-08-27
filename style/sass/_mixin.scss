@@ -1,0 +1,14 @@
+@use "placeholders";
+
+/*
+Ce mixin pourra être appelé afin de générer des boutons selon les différents paramètres
+On peut appeler un mixin avec la règle @include (voir les boutons dans le fichier _main.scss)
+Il faut le voir un peu comme un placeholder (@extend), mais les valeurs des propriétés CSS vont varier selon les valeurs passées en paramètres.
+*/
+@mixin bouton($background-clr, $txt-clr, $border-clr, $txt-size: 1rem){
+    @extend %button;
+    background-color: $background-clr;
+    color: $txt-clr;
+    border: solid 0.1em $border-clr;
+    font-size: $txt-size;
+}

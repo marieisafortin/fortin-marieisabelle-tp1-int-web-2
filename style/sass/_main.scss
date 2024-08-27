@@ -1,0 +1,36 @@
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace variables.$abc à chaque fois.
+*/
+@use "variables" as v;
+@use "placeholders";
+@use 'mixin' as m;
+
+.section {
+    margin: 2em 0;
+    h2 {
+        text-transform: uppercase;
+    }
+    p {
+        a {
+            color: v.$accent-color;
+        }
+    }
+
+    &__btn {
+        @include m.bouton(v.$primary-color, v.$accent-color-2, v.$accent-color-2);
+        
+
+        &:hover {
+            @include m.bouton(darken(v.$primary-color, 20%), v.$primary-color, v.$accent-color-2); 
+        }
+
+        &--accent {
+            @include m.bouton(v.$accent-color-2, v.$primary-color, v.$accent-color-2, 1.2rem);           
+
+            &:hover {
+                @include m.bouton(darken(v.$accent-color-2, 20%), v.$accent-color-2, v.$accent-color-2, 1.2rem);
+            }
+        }       
+    }
+}
