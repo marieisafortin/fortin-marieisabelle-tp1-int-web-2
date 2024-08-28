@@ -1,7 +1,7 @@
 
-@use "variables" as v;
+@use "variables" ;
 @use "placeholders";
-@use 'mixin' as m;
+@use 'mixin' ;
 
 .section {
     margin: 2em 0;

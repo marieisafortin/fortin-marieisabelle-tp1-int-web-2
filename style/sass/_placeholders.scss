@@ -1,8 +1,5 @@
-/*
-Ce fichier contient les placeholders, qui sont des groupes de règles CSS qu'on
-peut appeler et réutiliser à l'intérieur d'autres classes à l'aide de la règle @extend.
-*/
-@use 'variables' as *;
+
+@use 'variables';
 
 %flex-between{
     display: flex;
