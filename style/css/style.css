@@ -57,12 +57,13 @@ body {
   grid-column: 1fr 2fr;
 }
 
+
 header {
   background-color: #d4d1d1;
 }
 
 footer {
-  background-color: rgb(136, 24, 76);
+  background-color: #116b86;
   margin-top: auto;
   padding: 1em;
 }
@@ -73,7 +74,6 @@ footer {
 }
 .footer-content__message {
   text-align: center;
-  color: #da2c7d;
 }
 
 
@@ -97,10 +97,10 @@ footer {
 }
 .nav-list__link {
   text-transform: uppercase;
-  color: #da2c7d;
+  color: #272834;
 }
 .nav-list__link--actuel-header {
-  border-bottom: 0.2em solid rgb(136, 24, 76);
+  border-bottom: 0.2em solid rgb(21, 13, 69);
 }
 .nav-list__link--actuel-footer {
   border-bottom: 0.2em solid #f0eded;
@@ -126,27 +126,4 @@ footer {
 .section p a {
   color: rgb(136, 24, 76);
 }
-.section__btn {
-  background-color: #f0eded;
-  color: #da2c7d;
-  border: solid 0.1em #da2c7d;
-  font-size: 1rem;
-}
-.section__btn:hover {
-  background-color: #c2b5b5;
-  color: #f0eded;
-  border: solid 0.1em #da2c7d;
-  font-size: 1rem;
-}
-.section__btn--accent {
-  background-color: #da2c7d;
-  color: #f0eded;
-  border: solid 0.1em #da2c7d;
-  font-size: 1.2rem;
-}
-.section__btn--accent:hover {
-  background-color: #88184c;
-  color: #da2c7d;
-  border: solid 0.1em #da2c7d;
-  font-size: 1.2rem;
-}
+
